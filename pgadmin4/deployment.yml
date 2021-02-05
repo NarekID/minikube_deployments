@@ -20,3 +20,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: pgadmin4-config
+          ports:
+            - containerPort: 80
+              hostPort: 5050
