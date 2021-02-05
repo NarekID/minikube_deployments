@@ -5,11 +5,12 @@ metadata:
   labels:
     app: pgadmin4
 spec:
+  type: NodePort       
   selector:
     app: pgadmin4
   ports:
   - protocol: TCP
     port: 5050
-    targetPort: 5050
+    targetPort: 80
   selector:
     app: pgadmin4
