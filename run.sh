@@ -5,3 +5,4 @@ pgadmin4 is working! Credentials:
 email    - user@domain.com
 password - SuperSecret
 "
+minikube kubectl -- apply -f nginx/
