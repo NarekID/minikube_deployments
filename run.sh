@@ -1,5 +1,6 @@
 #!/bin/bash
 minikube kubectl -- apply -f nginx/
+echo
 minikube kubectl -- apply -f pgadmin4/
 echo "
 pgadmin4 is working! Credentials:
