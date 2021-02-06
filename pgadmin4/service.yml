@@ -5,7 +5,7 @@ metadata:
   labels:
     app: pgadmin4
 spec:
-  type: NodePort       
+  type: NodePort
   selector:
     app: pgadmin4
   ports:

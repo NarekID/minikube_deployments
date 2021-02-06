@@ -10,7 +10,7 @@ password - SuperSecret
 minikube kubectl -- apply -f postgres/
 echo "
 postgres is working! Credentials:
-db       = testdb
-user     = testuser
-password = TestPassWord123
+db       = postgres
+user     = user
+password = password123
 "

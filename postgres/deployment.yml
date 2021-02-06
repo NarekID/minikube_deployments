@@ -1,11 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: postgres-deployment
   labels:
     app: postgres
 spec:
   replicas: 1
+  serviceName: postgres-service
   selector:
     matchLabels:
       app: postgres
@@ -20,6 +21,13 @@ spec:
           envFrom:
             - configMapRef:
                 name: postgres-config
+          volumeMounts:
+            - mountPath: "/var/lib/postgresql/data"
+              name: postgres-pv
           ports:
             - containerPort: 5432
-
+              hostPort: 5432
+      volumes:
+      - name: postgres-pv
+        persistentVolumeClaim:
+          claimName: postgres-pvc
