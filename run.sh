@@ -14,3 +14,4 @@ db       = postgres
 user     = user
 password = password123
 "
+minikube service list

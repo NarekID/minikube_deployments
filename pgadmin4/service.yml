@@ -10,6 +10,7 @@ spec:
     app: pgadmin4
   ports:
   - protocol: TCP
+    nodePort: 30000
     port: 5050
     targetPort: 80
   selector:
