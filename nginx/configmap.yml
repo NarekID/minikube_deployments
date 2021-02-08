@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-conf
+  labels:
+    app: nginx
+data:
+  pgadmin.conf: |
+    server {
+        listen 80;
+        server_name pg.admin.com;
+        location / {
+            proxy_pass http://pg.admin.com:30000;
+      }
+    }
